@@ -1,0 +1,42 @@
+<<<<<<< HEAD
+Update v1.0 05/14/2025:
+  - Updated player logic
+  - Added timestamp functionality
+  - Updated history logic
+  - Updated "Last Watched Video" logic
+  - Replaced picture logo
+
+=======
+>>>>>>> main
+Update v0.9 05/17/2023:
+  - Added query search feature
+  - Updated history styles
+
+Update v0.8 05/25/2022:
+  - Added custom logo!
+  - Added devlog!
+
+Update v0.7 04/01/2022:
+  - Started using localStorage instead of Cookies.
+  - Added history feature!
+  - Removed particles (for now!)
+
+Update v0.6 03/11/2022:
+  - Added particle effects!
+
+Bug Fix v0.5 03/03/2022:
+  - Fixed last watched video feature + more bug fixes
+
+Update v0.4 03/03/2022:
+  - Added last watched video feature!
+
+Update/Bug Fix v0.3 02/28/2022:
+  - Fixed video glitch
+  - Added open in new tab feature!
+
+Update/Bug Fix v0.2 02/25/2022:
+  - Now showing video title and channel!
+  - Fixed input field
+
+Release v0.1 02/24/2022
+  

@@ -1,0 +1,21 @@
+{ 
+
+  "name": "NEKO Code Editor", 
+
+  "short_name": "NCE", 
+
+  "start_url": "./index.html", 
+
+  "display": "standalone", 
+
+  "icons": [{ 
+
+    "src": "nce-logo.png", 
+
+    "sizes": "826x874", 
+
+    "type": "image/png" 
+
+  }] 
+
+}
