@@ -1,11 +1,6 @@
 const base = "https://www.youtube-nocookie.com/embed/";
 const base2 = "https://www.youtube.com/";
 const watch = "watch?v=";
-<<<<<<< HEAD
-=======
-const end = "?wmode=transparent&amp;iv_load_policy=3&amp;autoplay=0&amp;html5=1&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=0&amp;theme=light";
-const strip_timestamps = /\?t=\d+/;
->>>>>>> main
 var t = document.querySelector("#title");
 var u = document.querySelector("#user");
 var video_holder;
@@ -15,10 +10,7 @@ var home = document.getElementById("home");
 var video_holder_holder = document.getElementById('video-holder-holder');
 var link;
 var id;
-<<<<<<< HEAD
 var time;
-=======
->>>>>>> main
 
 home.onclick = () => {
   window.location.href = "./index.html"
@@ -72,7 +64,6 @@ function loadJSON(path, success, error) {
 	document.title = Data.title + " - " + Data.author_name;
   localStorage.setItem("lwvt", Data.title);
   localStorage.setItem("lwv", id);
-<<<<<<< HEAD
   localStorage.setItem("lwvsa", time);
   if (JSON.parse(localStorage.getItem("history"))) {
     var newHistLength = parseInt(localStorage.getItem("historyLength"))+ 1;
@@ -159,42 +150,3 @@ function onYouTubeIframeAPIReady() {
     window.location.href = "./index.html";
   }
 }
-=======
-  if (localStorage.getItem("history") != null) {
-    localStorage.setItem("history", localStorage.getItem("history") + Base64.encode(Data.title) + "." + Base64.encode(id) + ":");
-  } else {
-    localStorage.setItem("history", Base64.encode(Data.title) + "." + Base64.encode(id) + ":");
-  }
-  }
-
-var queryString = new Array();
-window.onload = function () {
-    if (queryString.length == 0) {
-        if (window.location.search.split('?').length > 1) {
-            var params = window.location.search.split('?')[1].split('&');
-            for (var i = 0; i < params.length; i++) {
-                var key = params[i].split('=')[0];
-                var value = decodeURIComponent(params[i].split('=')[1]);
-                queryString[key] = value;
-            }
-        }
-    }
-    if (queryString["v"] != null) {
-        if(document.getElementById('instructions')) {
-            document.getElementById('instructions').remove();
-        }
-        vid.style.display = "";
-        link = queryString["v"];
-        id = link.replace(strip_timestamps, "");
-        id = id.substr(id.length - 11, 11);
-        video_holder = document.getElementById('video-holder');
-        video_holder.style.display = 'block';
-        v.src = base + id + end;
-        video_holder_holder.appendChild(video_holder);
-        var oembed = "https://www.youtube.com/oembed?url=" + base2 + watch +  id + "&format=json";
-        // t.innerHTML = oembed
-        loadJSON(oembed, myData);
-        url.value = "";
-    }
-};
->>>>>>> main

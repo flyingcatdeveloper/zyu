@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 var DEV = false;
-=======
-var DEV = true;
->>>>>>> main
 
 window.onerror = function (msg, url, linenumber) {
   if (DEV === true) {
@@ -36,7 +32,6 @@ var id;
 
 function Send() {
 	var v = document.getElementById("vLink").value;
-<<<<<<< HEAD
   if (v.includes("?")) {
     var beforeUrl = v.split("?")[1];
     if (beforeUrl.includes("&")) {
@@ -86,31 +81,6 @@ function Send2(vID, startAt) {
 		l.innerHTML = localStorage.getItem("lwvt");
 		l.addEventListener("click", () => {
 			Send2(localStorage.getItem("lwv"), localStorage.getItem("lwvsa"));
-=======
-	var beforeUrl = v.split("?")[1];
-	if (beforeUrl.includes("&")) {
-		afterUrl = beforeUrl.split("&")[0];
-		v = afterUrl.split("v=")[1];
-	} else {
-		v = beforeUrl.split("v=")[1];
-	}
-	var url = "watch.html?v=" + encodeURIComponent(v);
-	window.location.replace(url);
-}
-
-function Send2(vID) {
-	var v = vID;
-	var url = "watch.html?v=" + encodeURIComponent(v);
-	window.location.replace(url);
-}
-
-  function checkLWV() {
-    if (localStorage.getItem("lwv") != null && localStorage.getItem("lwvt") != null) {
-		lw.style.display = "";
-		l.innerHTML = localStorage.getItem("lwvt");
-		l.addEventListener("click", () => {
-			Send2(localStorage.getItem("lwv"));
->>>>>>> main
 		})
 	} else {
 		lw.style.display = "none";
